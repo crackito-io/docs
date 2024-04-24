@@ -1,1 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill-rule="evenodd" d="M81 36 64 0 47 36l-1 2-9-10a6 6 0 0 0-9 9l10 10h-2L0 64l36 17h2L28 91a6 6 0 1 0 9 9l9-10 1 2 17 36 17-36v-2l9 10a6 6 0 1 0 9-9l-9-9 2-1 36-17-36-17-2-1 9-9a6 6 0 1 0-9-9l-9 10v-2Zm-17 2-2 5c-4 8-11 15-19 19l-5 2 5 2c8 4 15 11 19 19l2 5 2-5c4-8 11-15 19-19l5-2-5-2c-8-4-15-11-19-19l-2-5Z" clip-rule="evenodd"/><path d="M118 19a6 6 0 0 0-9-9l-3 3a6 6 0 1 0 9 9l3-3Zm-96 4c-2 2-6 2-9 0l-3-3a6 6 0 1 1 9-9l3 3c3 2 3 6 0 9Zm0 82c-2-2-6-2-9 0l-3 3a6 6 0 1 0 9 9l3-3c3-2 3-6 0-9Zm96 4a6 6 0 0 1-9 9l-3-3a6 6 0 1 1 9-9l3 3Z"/><style>path{fill:#000}@media (prefers-color-scheme:dark){path{fill:#fff}}</style></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 532 501" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-885,-29)">
+        <g transform="matrix(0.881919,0,0,0.947008,100.326,0.502588)">
+            <g transform="matrix(1.15485,0,0,1.07547,-137.83,-1.10126)">
+                <rect x="890.59" y="29.235" width="520.858" height="490.927" style="fill:white;"/>
+                <g transform="matrix(3.12469,0,0,3.12469,777.451,-4.48812)">
+                    <path d="M104.811,104.666C103.131,92.286 67.232,95.46 70.577,80.909C73.922,66.359 105.719,42.129 120.435,35.032C129.202,30.804 148.018,19.448 153.528,26.271C159.037,33.093 133.335,61.51 137.392,71.682C142.861,85.393 171.729,86.888 168.499,100.64C165.269,114.392 137.794,130.846 122.255,137.814C110.176,143.23 88.348,154.269 82.722,148.245C77.097,142.221 106.22,115.047 104.811,104.666Z" style="fill:none;"/>
+                    <clipPath id="_clip1">
+                        <path d="M104.811,104.666C103.131,92.286 67.232,95.46 70.577,80.909C73.922,66.359 105.719,42.129 120.435,35.032C129.202,30.804 148.018,19.448 153.528,26.271C159.037,33.093 133.335,61.51 137.392,71.682C142.861,85.393 171.729,86.888 168.499,100.64C165.269,114.392 137.794,130.846 122.255,137.814C110.176,143.23 88.348,154.269 82.722,148.245C77.097,142.221 106.22,115.047 104.811,104.666Z"/>
+                    </clipPath>
+                    <g clip-path="url(#_clip1)">
+                        <g transform="matrix(1.07442,-0.442984,0.423895,1.02812,-33.5878,39.3939)">
+                            <circle cx="108.99" cy="92.121" r="64.99" style="fill:url(#_Linear2);"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(129.98,0,0,129.98,43.9999,92.1214)"><stop offset="0" style="stop-color:rgb(66,4,126);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(244,7,64);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>
