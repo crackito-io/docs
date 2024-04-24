@@ -6,21 +6,29 @@ export default defineConfig({
 	site: 'https://docs.crackito.io',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: '',
+			logo: {
+				light: './src/assets/logo_docs.webp',
+				dark: './src/assets/logo_docs_light.webp'
+			},
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/crackito-io/crackito',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
-					],
+					label: 'Overview', link: '/overview'
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'User',
+					autogenerate: { directory: 'user' },
+				},
+				{
+					label: 'Admin',
+					autogenerate: { directory: 'admin' },
+				},
+				{
+					label: 'Developper',
+					autogenerate: { directory: 'developper' },
 				},
 			],
 		}),
