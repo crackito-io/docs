@@ -5,7 +5,7 @@ export default defineConfig({
   site: "https://docs.crackito.io",
   integrations: [
     starlight({
-      title: "",
+      title: "Crackito",
 	  defaultLocale: "en",
       locales: {
         en: {
@@ -18,6 +18,7 @@ export default defineConfig({
       logo: {
         light: "./src/assets/logo_docs.webp",
         dark: "./src/assets/logo_docs_light.webp",
+		replacesTitle: true,
       },
       social: {
         github: "https://github.com/crackito-io/crackito",
