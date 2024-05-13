@@ -32,8 +32,8 @@ export default defineConfig({
           link: "/overview",
         },
         {
-          label: "Installation",
-          autogenerate: { directory: "installation" },
+          label: "User",
+          autogenerate: { directory: "user" },
         },
         {
           label: "Admin",

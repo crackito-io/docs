@@ -1,14 +1,10 @@
 ---
-title: Gitea
+title: Installation
 sidebar:
-    order: 2
+    order: 1
 ---
 
 import { Code, FileTree, Steps } from "@astrojs/starlight/components";
-import giteaEnv from "/src/code/gitea/.gitea.env?raw";
-
-export const highlight = [{range: "1-9"}]
-
 
 ## Prerequisite
 
@@ -21,7 +17,15 @@ The following items are required for this step
 ping exemple.com
 ```
 
-## Installation
+## Automatic installation
+
+## Manual installation
+    
+### Gitea
+
+import giteaEnv from "/src/code/gitea/.gitea.env?raw";
+
+export const highlightGitea = [{ range: "1-9" }];
 
 <Steps>
 
@@ -38,12 +42,11 @@ ping exemple.com
 
     In the following folder, you must edit the `.gitea.env` file
 
-    
-    <Code code={giteaEnv} lang="toml" title=".gitea.env" mark={highlight} />
+    <Code code={giteaEnv} lang="toml" title=".gitea.env" mark={highlightGitea} />
 
     It is important to complete the highlighted lines, the database values must be the same as in `docker-compose.yml`.
 
-2. Now we can do
+2.  Now we can do
     ```bash
     docker compose up gitea db-gitea  -d
     ```
