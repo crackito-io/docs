@@ -6,6 +6,9 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Crackito",
+      customCss: [
+        './src/styles/custom.css',
+      ],
 	  defaultLocale: "en",
       locales: {
         en: {
@@ -29,8 +32,8 @@ export default defineConfig({
           link: "/overview",
         },
         {
-          label: "User",
-          autogenerate: { directory: "user" },
+          label: "Installation",
+          autogenerate: { directory: "installation" },
         },
         {
           label: "Admin",

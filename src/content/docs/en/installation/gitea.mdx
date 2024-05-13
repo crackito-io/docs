@@ -1,0 +1,52 @@
+---
+title: Gitea
+sidebar:
+    order: 2
+---
+
+import { Code, FileTree, Steps } from "@astrojs/starlight/components";
+import giteaCompose from "/src/code/gitea/docker-compose.yml?raw";
+import giteaEnv from "/src/code/gitea/.gitea.env?raw";
+
+export const highlight = [...Array(9).keys()].map((key) => key + 1)
+
+
+## Prerequisite
+
+The following items are required for this step
+
+-   Docker and Docker compose installed, you can find a guide to [install docker on your system](https://docs.docker.com/engine/install/)
+-   A domain name pointing to your server. To check that it's correctly configured, you can open your terminal and send it a ping
+
+```bash
+ping exemple.com
+```
+
+## Installation
+
+<Steps>
+
+1.  In your crackito folder you can find a `.gitea.env` file:
+
+        <FileTree>
+
+        - crackito
+            - docker-compose.yml
+            - **.gitea.env**
+            - ...
+
+        </FileTree>
+
+    In the following folder, you must edit the `.gitea.env` file
+
+    
+    <Code code={giteaEnv} lang="toml" title=".gitea.env" mark={highlight} />
+
+    It is important to complete the highlighted lines, the database values must be the same as in `docker-compose.yml`.
+
+2. Now we can do
+    ```bash
+    docker compose up gitea db-gitea  -d
+    ```
+
+</Steps>
