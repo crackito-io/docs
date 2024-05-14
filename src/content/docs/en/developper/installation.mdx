@@ -76,11 +76,7 @@ import giteaConfigWoodpecker from "/src/assets/woodpecker/gitea configuration.pn
 import giteaSecretWoodpecker from "/src/assets/woodpecker/gitea secret.png";
 
 <Steps>
-1.  There are two ways to create a Gitea OAuth2 Application, web panel and command line
-
-    #### Web panel
-
-    Go to admin user application setting https://YOUR_GITEA_URL/user/settings/applications
+1.  Go to admin user application setting https://YOUR_GITEA_URL/user/settings/applications
 
     Create new OAuth2 Application, with the following value:
     <Image src={giteaConfigWoodpecker} alt="" />
@@ -93,73 +89,6 @@ import giteaSecretWoodpecker from "/src/assets/woodpecker/gitea secret.png";
     Keep the client secret for Woodpecker, if you lose it, you will have to regenerate it
     :::
     <Image src={giteaSecretWoodpecker} alt="" />
-
-    #### Command line
-
-    First, you need to generate the base64 version of your Gitea ID `$USERNAME:$PASSWORD`, if `USERNAME` is "admin" and `PASSWORD` is "admin", then the command will be
-    ```bash
-    $ echo -n "admin:admin" | base64
-    YWRtaW46YWRtaW4=
-    ```
-
-    You can decode your base64 value to validate it
-    ```bash
-    $ echo "YWRtaW46YWRtaW4=" | base64 -d
-    admin:admin
-    ```
-
-    It is recommended to create environment variables to easily execute the following commands
-
-    `GITEA_URL`, your gitea url
-    ```bash
-    $ GITEA_URL=https://gitea.exemple.com
-    ```
-
-    `TOKEN`, your previously generated base64 Gitea ID
-    ```bash
-    $ TOKEN=YWRtaW46YWRtaW4=
-    ```
-
-    `WOODPECKER_URL`, your woodpecker url
-    ```bash
-    $ WOODPECKER_URL=https://woodpecker.exemple.com
-    ```
-
-
-    ```bash
-    $ curl --location "$GITEA_URL/api/v1/users/crackito/tokens" \
-        --header 'Content-Type: application/json' \
-        --header "Authorization: Basic $TOKEN" \
-        --data '{
-            "name": "crackitos",
-            "scopes": [
-                "write:user",
-                "write:admin",
-                "write:repository"
-            ]
-        }'
-
-    {"id":3,"name":"crackito","sha1":"a69ae42c4269ff9624faaa4be24096db21f96a6d","token_last_eight":"21f96a6d","scopes":null}
-    ```
-
-    Now we are going to save the new `TOKEN` with returned "sha1"
-    ```bash
-    $ TOKEN=a69ae42c4269ff9624faaa4be24096db21f96a6d
-    ```
-    ```bash
-    $ curl --location "$GITEA_URL/api/v1/user/applications/oauth2" \
-        --header "Content-Type: application/json" \
-        --header "Authorization: Bearer $TOKEN" \
-        --data '{
-            "confidential_client": true,
-            "name": "Woodpecker",
-            "redirect_uris": [
-                "'$WOODPECKER_URL'/authorize"
-            ]
-        }'
-
-    {"id":7,"name":"Woodpecker","client_id":"7397cbd8-e584-4470-9772-5776fdfef2f8","client_secret":"gto_uarlteoyrdxr5enbngbwynbfsaoex4k2cm6zuzexinkakvnnnfea","confidential_client":true,"redirect_uris":["https://woodpecker.exemple.com/authorize"],"created":"2024-05-14T13:31:27Z"}
-    ```
 
 2.  Now, you set all value in .woodpecker.env file
 
