@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import starlightLinksValidator from 'starlight-links-validator';
+import starlightLinksValidator from "starlight-links-validator";
 
 export default defineConfig({
     site: "https://docs.crackito.io",
@@ -9,6 +9,7 @@ export default defineConfig({
             title: "Crackito",
             customCss: ["./src/styles/custom.css"],
             plugins: [starlightLinksValidator()],
+            tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
             defaultLocale: "en",
             locales: {
                 en: {
