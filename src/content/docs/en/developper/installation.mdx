@@ -20,7 +20,7 @@ ping exemple.com
 ## Automatic installation
 
 ## Manual installation
-    
+
 ### Gitea
 
 import giteaEnv from "/src/code/gitea/.gitea.env?raw";
@@ -47,8 +47,16 @@ export const highlightGitea = [{ range: "1-9" }];
     It is important to complete the highlighted lines, the database values must be the same as in `docker-compose.yml`.
 
 2.  Now we can do
+
     ```bash
     docker compose up gitea db-gitea  -d
     ```
 
+3.  We can now create an administrator user for Gitea
+    ```bash
+    docker exec --user git gitea gitea admin user create --admin --username $USERNAME --password $PASSWORD --email $EMAIL
+    ```
+    Replace each variable with its value. After that, you can access your Gitea panel and log in with the specified `$USERNAME` and `$PASSWORD`.
+
 </Steps>
+
